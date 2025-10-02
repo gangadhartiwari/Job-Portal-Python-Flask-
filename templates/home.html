@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GDT Careers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      #banner {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Portal</h1>
+      <img
+        class="img-fluid"
+        id="banner"
+        src="static/banner.jpg"
+        alt="Poster"
+        height="300"
+      />
+
+      <h2 class="text-center mt-2 mb-4">About the Job</h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem
+        accusantium quae, quia amet minima quis hic vitae sapiente, nisi fugiat
+        nulla eligendi nesciunt deserunt tempore sint labore modi eaque! Dolor
+        omnis error itaque temporibus iste velit beatae modi sit maiores
+        voluptatem. Alias laborum eum libero perspiciatis neque atque esse quod!
+      </p>
+
+      <h2 class="text-center mt-2 mb-4">Open Jobs</h2>
+      <div>
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-sm">Contact Us</button>
+        <p class="text-center">copyright all right reserved</p>
+      </div>
+    </div>
+  </body>
+</html>
